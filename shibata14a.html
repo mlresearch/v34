@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Inferring (k,l)-context-sensitive probabilistic context-free grammars using hierarchical Pitman-Yor processes | ICGI 2014 | JMLR W&amp;CP</title>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="../css/jmlr.css" />
+
+	<!-- Fixed position navigation -->
+	<!--#include virtual="/proceedings/css-scroll.txt"-->
+
+	<!-- MathJax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+	<!-- Metadata -->
+	<!-- Google Scholar Meta Data -->
+
+<meta name="citation_title" content="Inferring (k,l)-context-sensitive probabilistic context-free grammars using hierarchical Pitman-Yor processes">
+
+  <meta name="citation_author" content="Shibata, Chihiro">
+
+<meta name="citation_publication_date" content="2014">
+<meta name="citation_conference_title" content="The 12th International Conference on Grammatical Inference">
+<meta name="citation_firstpage" content="153">
+<meta name="citation_lastpage" content="166">
+<meta name="citation_pdf_url" content="shibata14a.pdf">
+
+</head>
+<body>
+
+
+<div id="fixed">
+<!--#include virtual="/proceedings/nav-bar.txt"-->
+</div>
+
+<div id="content">
+
+	<h1>Inferring (k,l)-context-sensitive probabilistic context-free grammars using hierarchical Pitman-Yor processes</h1>
+
+	<div id="authors">
+	
+		Chihiro Shibata
+	</div>;
+	<div id="info">
+		JMLR W&amp;CP 34 
+		
+		: 
+		153–166, 2014
+	</div> <!-- info -->
+
+	
+
+	<h2>Abstract</h2>
+	<div id="abstract">
+		Motivated by the idea of applying nonparametric Bayesian models to dual approaches for distributional learning, we define <span class="math">\((k,l)\)</span>-context-sensitive probabilistic context-free grammars (PCFGs) using hierarchical Pitman-Yor processes (PYPs). The data sparseness problem that occurs when inferring context-sensitive probabilities for rules is handled by the smoothing effect of hierarchical PYPs. Many possible definitions or constructions of PYP hierarchies can be used to represent the context sensitivity of derivations of CFGs in Chomsky normal form. In this study, we use a definition that is considered to be the most natural as an extension of infinite PCFGs defined in previous studies. A Markov Chain Monte Carlo method called blocked Metropolis-Hastings (MH) sampling is known to be effective for inferring PCFGs from unsupervised sentences. Blocked MH sampling is applicable to <span class="math">\((k,l)\)</span>-context-sensitive PCFGs by modifying their so-called inside probabilities. We show that the computational cost of blocked MH sampling for <span class="math">\((k,l)\)</span>-context-sensitive PCFGs is <span class="math">\(O(|V|^{l+3}|s|^3)\)</span> for each sentence <span class="math">\(s\)</span>, where <span class="math">\(V\)</span> is a set of nonterminals. This cost is too high to iterate sufficient sampling times, especially when <span class="math">\(l \neq 0\)</span>, thus we propose an alternative sampling method that separates the sampling procedure into pointwise sampling for nonterminals and blocked sampling for rules. The computational cost of this sampling method is <span class="math">\(O(\min\{|s|^{l},|V|^{l}\} (|V||s|^2+|s|^3) )\)</span>.
+	</div>
+
+	<h2>Related Material</h2>
+	<div id="extras">
+		<ul>
+			<li><a href="shibata14a.pdf">Download PDF</a></li>
+			
+			
+		</ul>
+	</div> <!-- extras -->
+
+</div> <!-- content -->
+
+</body>
+</html>
