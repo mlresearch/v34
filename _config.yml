@@ -1,5 +1,3 @@
-# Site settings
-# Auto generated from v34.bib
 ---
 year: '2014'
 shortname: ICGI
@@ -16,6 +14,7 @@ sections:
 - name: default
   title: Accepted Papers
 layout: proceedings
+series: Proceedings of Machine Learning Research
 id: ICGI-2014
 month: 0
 abstract: ''
@@ -49,3 +48,5 @@ conference:
 analytics:
   google:
     tracking_id: UA-92432422-1
+# Site settings
+# Auto generated from v34.bib
