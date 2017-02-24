@@ -1,477 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>ICGI 2014 | JMLR W&amp;CP</title>
+---
+layout: default
+---
 
-	<!-- Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../css/jmlr.css" />
+<div id="content" class="home">
 
-	<!-- Fixed position navigation -->
-	<!--#include virtual="/proceedings/css-scroll.txt"-->
+  <h1>Proceedings of Machine Learning Research</h1>
+  <h2>Volume {{ site.volume }}: {{ site.conference.name }}, {{ site.conference.dates.first | date: "%B %-d" }} to {{ site.conference.dates.last | date: "%B %-d, %Y" }}, {{ site.conference.location }}</h2>
+  {% if site.github.edit %}
+  <p align="right">[<a href="https://github.com/{{ site.github_username }}/{% if site.github.repository %}{{ site.github.repository }}{% else %}{{ site.baseurl }}{% endif %}/edit/{% if site.github.repository contains 'github.io' %}master{% else %}gh-pages{% endif %}/_config.yml">edit</a>]</p>
+  {% endif %}
 
-	<!-- MathJax -->
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+  <p><strong>Editors:
+      {% assign lastone = site.editor | last %}
+      {% for person in site.editor %}
+      {% include listperson.html %}
+      {% endfor %}
+  </strong></p>
+  <p>[<a href="./bibliography.bib">bib</a>][<a href="./citeproc.yaml">citeproc</a>]</p>
+  <div id="sectionnav">
+    {% if site.sections %}
+    <p>Contents:</p>
+    <ul>
+      {% for section in site.sections %}
+      <li><a href="#{{ section.name }}">{{ section.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <label for="search-authors">Filter Authors:</label>
+    <input type="search" name="filter-authors" id="search-authors" value />
+    <label for="search-titles">Filter Titles:</label>
+    <input type="search" name="filter-titles" id="search-titles" value />
+  </div>
+  {% if site.sections %}
+  {% for section in site.sections %}
+  <h3 id="{{ section.name }}">{{ section.title }}</h3>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+    {% if section.name == post.section %}
+    {% include listpaper.html %}
+    {% endif %}
+    {% endfor %}
+  </dl>
+  {% endfor %}
+  {% endif %}
+  <dl>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+  {% unless post.section %} 
+  {% include listpaper.html %}
+  {% endunless %}
+  {% endfor %}
 
-
-</head>
-<body>
-
-<div id="fixed">
-<!--#include virtual="/proceedings/nav-bar.txt"-->
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  
 </div>
-
-<div id="content">
-	<h1>JMLR Workshop and Conference Proceedings</h1>
-	<h2>Volume 34: The 12th International Conference on Grammatical Inference</h2>
-
-	<p><strong>Editors: 
-	
-		Alexander Clark,
-	
-		Makoto Kanazawa,
-	
-		Ryo Yoshinaka
-	</strong></p>
-
-	<div id="sectionnav">
-		<p>Contents:</p>
-		<ul>
-		
-			<li><a href="#preface">Preface</a></li>
-		
-			<li><a href="#invited">Invited Talks</a></li>
-		
-			<li><a href="#default">Accepted Papers</a></li>
-		
-		</ul>
-
-		<label for="search-authors">Filter Authors:</label>
-		<input type="search" name="filter-authors" id="search-authors" value />
-		<label for="search-titles">Filter Titles:</label>
-		<input type="search" name="filter-titles" id="search-titles" value />
-	</div>
-
-	
-	<h3 id="preface">Preface</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">Preface</p>
-	<p class="details">
-	<span class="authors">
-		
-			Alexander Clark,
-		
-			Makoto Kanazawa,
-		
-			Ryo Yoshinaka
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:1-2, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="clark14a.html">abs</a>]
-		[<a href="clark14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-	<h3 id="invited">Invited Talks</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">Grammar Compression: Grammatical Inference by Compression and Its Application to Real Data</p>
-	<p class="details">
-	<span class="authors">
-		
-			Hiroshi Sakamoto
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:3-20, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="sakamoto14a.html">abs</a>]
-		[<a href="sakamoto14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Towards a rationalist theory of language acquisition</p>
-	<p class="details">
-	<span class="authors">
-		
-			Edward Stabler
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:21-32, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="stabler14a.html">abs</a>]
-		[<a href="stabler14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-	<h3 id="default">Accepted Papers</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">A Canonical Semi-Deterministic Transducer</p>
-	<p class="details">
-	<span class="authors">
-		
-			Achilles Beros,
-		
-			Colin de la Higuera
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:33-48, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="beros14a.html">abs</a>]
-		[<a href="beros14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">A bottom-up efficient algorithm learning substitutable languages from positive examples</p>
-	<p class="details">
-	<span class="authors">
-		
-			François Coste,
-		
-			Ga<span>ë</span>lle Garet,
-		
-			Jacques Nicolas
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:49-63, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="coste14a.html">abs</a>]
-		[<a href="coste14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Some improvements of the spectral learning approach for probabilistic grammatical inference</p>
-	<p class="details">
-	<span class="authors">
-		
-			Mattias Gybels,
-		
-			François Denis,
-		
-			Amaury Habrard
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:64-78, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="gybels14a.html">abs</a>]
-		[<a href="gybels14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">An Abstract Framework for Counterexample Analysis in Active Automata Learning</p>
-	<p class="details">
-	<span class="authors">
-		
-			Malte Isberner,
-		
-			Bernhard Steffen
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:79-93, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="isberner14a.html">abs</a>]
-		[<a href="isberner14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Very efficient learning of structured classes of subsequential functions from positive data</p>
-	<p class="details">
-	<span class="authors">
-		
-			Adam Jardine,
-		
-			Jane Chandlee,
-		
-			Rémi Eyraud,
-		
-			Jeffrey Heinz
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:94-108, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="jardine14a.html">abs</a>]
-		[<a href="jardine14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Learning Nondeterministic Mealy Machines</p>
-	<p class="details">
-	<span class="authors">
-		
-			Ali Khalili,
-		
-			Armando Tacchella
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:109-123, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="khalili14a.html">abs</a>]
-		[<a href="khalili14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Maximizing a Tree Series in the Representation Space</p>
-	<p class="details">
-	<span class="authors">
-		
-			Guillaume Rabusseau,
-		
-			François Denis
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:124-138, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="rabusseau14a.html">abs</a>]
-		[<a href="rabusseau14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Grammatical Inference of some Probabilistic Context-Free Grammars from Positive Data using Minimum Satisfiability</p>
-	<p class="details">
-	<span class="authors">
-		
-			James Scicluna,
-		
-			Colin de la Higuera
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:139-152, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="scicluna14a.html">abs</a>]
-		[<a href="scicluna14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Inferring (k,l)-context-sensitive probabilistic context-free grammars using hierarchical Pitman-Yor processes</p>
-	<p class="details">
-	<span class="authors">
-		
-			Chihiro Shibata
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:153-166, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="shibata14a.html">abs</a>]
-		[<a href="shibata14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Bigger is Not Always Better: on the Quality of Hypotheses in Active Automata Learning</p>
-	<p class="details">
-	<span class="authors">
-		
-			Rick Smetsers,
-		
-			Michele Volpato,
-		
-			Frits Vaandrager,
-		
-			Sicco Verwer
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:167-181, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="smetsers14a.html">abs</a>]
-		[<a href="smetsers14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">An example distribution for probabilistic query learning of simple deterministic languages</p>
-	<p class="details">
-	<span class="authors">
-		
-			Yasuhiro Tajima,
-		
-			Genichiro Kikui
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:182-192, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="tajima14a.html">abs</a>]
-		[<a href="tajima14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Evaluation of selection in context-free grammar learning systems</p>
-	<p class="details">
-	<span class="authors">
-		
-			Menno van Zaanen,
-		
-			Nanne van Noord
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:193-206, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="vanzaanen14a.html">abs</a>]
-		[<a href="vanzaanen14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Induction of Directed Acyclic Word Graph in a Bioinformatics Task</p>
-	<p class="details">
-	<span class="authors">
-		
-			Wojciech Wieczorek,
-		
-			Olgierd Unold
-	</span>
-	;
-	<span class="info">
-		JMLR W&amp;CP 34
-		:207-217, 2014
-	</span>
-	</p>
-	<p class="links">
-		[<a href="wieczorek14a.html">abs</a>]
-		[<a href="wieczorek14a.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-
-</div> <!-- content -->
-	<!-- Search Widget -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="../js/search.js"></script>
-</body>
-</html>
+<!-- Search Widget -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="../js/search.js"></script>

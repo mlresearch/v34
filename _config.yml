@@ -1,0 +1,51 @@
+# Site settings
+# Auto generated from v34.bib
+---
+year: '2014'
+shortname: ICGI
+booktitle: The 12th International Conference on Grammatical Inference
+volume: 34
+start: 2014-09-17
+end: 2014-09-19
+published: 2014-08-30
+sections:
+- name: preface
+  title: Preface
+- name: invited
+  title: Invited Talks
+- name: default
+  title: Accepted Papers
+layout: proceedings
+id: ICGI-2014
+month: 0
+abstract: ''
+editor:
+- given: Alexander
+  family: Clark
+- given: Makoto
+  family: Kanazawa
+- given: Ryo
+  family: Yoshinaka
+title: The 12th International Conference on Grammatical Inference
+email: ''
+description: The 12th International Conference on Grammatical Inference, Kyoto, Japan
+url: http://proceedings.mlr.press
+baseurl: "/v34"
+twitter_username: mlresearch
+github_username: mlresearch
+markdown: kramdown
+permalink: "/:title.html"
+github:
+  edit: true
+  repository: v34
+conference:
+  name: International Conference on Grammatical Inference
+  url: http://www.iip.ist.i.kyoto-u.ac.jp/icgi2014/
+  location: Kyoto, Japan
+  dates:
+  - 2014-09-17
+  - 2014-09-18
+  - 2014-09-19
+analytics:
+  google:
+    tracking_id: UA-92432422-1
