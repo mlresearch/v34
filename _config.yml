@@ -18,6 +18,8 @@ series: Proceedings of Machine Learning Research
 id: ICGI-2014
 month: 0
 abstract: ''
+tex_title: 
+title: Proceedings of Machine Learning Research
 editor:
 - given: Alexander
   family: Clark
@@ -25,7 +27,6 @@ editor:
   family: Kanazawa
 - given: Ryo
   family: Yoshinaka
-title: Proceedings of Machine Learning Research
 description: |
   The 12th International Conference on Grammatical Inference
     Held in Kyoto, Japan on 17-19 September 2014
