@@ -25,9 +25,21 @@ editor:
   family: Kanazawa
 - given: Ryo
   family: Yoshinaka
-title: The 12th International Conference on Grammatical Inference
-email: ''
-description: The 12th International Conference on Grammatical Inference, Kyoto, Japan
+title: Proceedings of Machine Learning Research
+description: |
+  The 12th International Conference on Grammatical Inference
+    Held in Kyoto, Japan on 17-19 September 2014
+
+  Published as Volume 34 by the Proceedings of Machine Learning Research on 30 August 2014.
+
+  Volume Edited by:
+    Alexander Clark
+    Makoto Kanazawa
+    Ryo Yoshinaka
+
+  Series Editors:
+    Neil D. Lawrence
+    Mark Reid
 url: http://proceedings.mlr.press
 baseurl: "/v34"
 twitter_username: mlresearch
@@ -37,6 +49,7 @@ permalink: "/:title.html"
 github:
   edit: true
   repository: v34
+email: ''
 conference:
   name: International Conference on Grammatical Inference
   url: http://www.iip.ist.i.kyoto-u.ac.jp/icgi2014/
