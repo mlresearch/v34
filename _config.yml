@@ -17,9 +17,6 @@ layout: proceedings
 series: Proceedings of Machine Learning Research
 id: ICGI-2014
 month: 0
-abstract: ''
-tex_title: 
-title: Proceedings of Machine Learning Research
 cycles: false
 editor:
 - given: Alexander
@@ -28,6 +25,7 @@ editor:
   family: Kanazawa
 - given: Ryo
   family: Yoshinaka
+title: Proceedings of Machine Learning Research
 description: |
   The 12th International Conference on Grammatical Inference
     Held in Kyoto, Japan on 17-19 September 2014
@@ -45,7 +43,7 @@ description: |
 date_str: 17--19 Sep
 url: http://proceedings.mlr.press
 baseurl: "/v34"
-twitter_username: mlresearch
+twitter_username: MLResearchPress
 github_username: mlresearch
 markdown: kramdown
 permalink: "/:title.html"
@@ -57,6 +55,7 @@ display:
     bibtex: true
     endnote: true
     apa: true
+    ris: true
   comments: false
 email: ''
 conference:
@@ -72,3 +71,4 @@ analytics:
     tracking_id: UA-92432422-1
 # Site settings
 # Auto generated from v34.bib
+---
